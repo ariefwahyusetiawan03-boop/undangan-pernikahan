@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Landing Page</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Kira Invitation</div>
+    <a class="btn" href="#rsvp">Buka Undangan</a>
+  </header>
+
+  <main class="hero">
+    <section class="card">
+      <p class="badge">Undangan Digital</p>
+      <h1>Haidah & Asyaf</h1>
+      <p class="subtitle">
+        Dengan memohon rahmat Allah SWT, kami mengundang Anda untuk hadir.
+      </p>
+
+      <div class="meta">
+        <div class="meta-item">
+          <span class="label">Hari</span>
+          <span class="value">Minggu</span>
+        </div>
+        <div class="meta-item">
+          <span class="label">Tanggal</span>
+          <span class="value">10 Maret 2026</span>
+        </div>
+        <div class="meta-item">
+          <span class="label">Lokasi</span>
+          <span class="value">Surabaya</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="#rsvp">Konfirmasi Hadir</a>
+        <a class="btn ghost" target="_blank" rel="noreferrer" href="https://maps.google.com">
+          Buka Maps
+        </a>
+      </div>
+    </section>
+
+    <section id="rsvp" class="card rsvp">
+      <h2>RSVP</h2>
+      <p class="subtitle">Isi nama dan jumlah tamu, nanti muncul pesan WhatsApp otomatis.</p>
+
+      <form id="rsvpForm">
+        <label>
+          Nama
+          <input id="nama" type="text" placeholder="Contoh: Dinda" required />
+        </label>
+
+        <label>
+          Jumlah Tamu
+          <input id="jumlah" type="number" min="1" max="10" value="1" required />
+        </label>
+
+        <button class="btn primary" type="submit">Kirim via WhatsApp</button>
+        <p class="hint" id="hint"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 • Dibuat dengan ❤</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
