@@ -3,71 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Landing Page</title>
-
+  <title>Undangan Arief & Eka</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">Kira Invitation</div>
-    <a class="btn" href="#rsvp">Buka Undangan</a>
-  </header>
 
-  <main class="hero">
-    <section class="card">
-      <p class="badge">Undangan Digital</p>
-      <h1>Haidah & Asyaf</h1>
-      <p class="subtitle">
-        Dengan memohon rahmat Allah SWT, kami mengundang Anda untuk hadir.
-      </p>
+  <main class="page">
+    <section class="cover" aria-label="Halaman Cover Undangan">
+      <div class="overlay">
+        <p class="small-title">The Wedding Of</p>
 
-      <div class="meta">
-        <div class="meta-item">
-          <span class="label">Hari</span>
-          <span class="value">Minggu</span>
+        <h1 class="names">
+          <span class="name">Arief</span>
+          <span class="amp">&</span>
+          <span class="name">Eka</span>
+        </h1>
+
+        <div class="to-box">
+          <p class="to-label">Kepada Yth;</p>
+          <p class="to-sub">Bapak/Ibu/Saudara/i</p>
+          <p class="guest" id="guestName">Nama Tamu</p>
         </div>
-        <div class="meta-item">
-          <span class="label">Tanggal</span>
-          <span class="value">10 Maret 2026</span>
-        </div>
-        <div class="meta-item">
-          <span class="label">Lokasi</span>
-          <span class="value">Surabaya</span>
-        </div>
+
+        <button class="open-btn" id="openBtn" type="button">
+          Open Invitation
+        </button>
       </div>
 
-      <div class="actions">
-        <a class="btn primary" href="#rsvp">Konfirmasi Hadir</a>
-        <a class="btn ghost" target="_blank" rel="noreferrer" href="https://maps.google.com">
-          Buka Maps
+      <!-- Floating Buttons -->
+      <div class="float">
+        <a class="fab wa" id="waBtn" href="#" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+          <!-- icon WA sederhana -->
+          <svg viewBox="0 0 32 32" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M19.11 17.2c-.3-.16-1.76-.87-2.03-.97-.27-.1-.47-.16-.67.16-.2.3-.77.97-.94 1.17-.17.2-.34.23-.64.08-.3-.16-1.25-.46-2.38-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.62.13-.13.3-.34.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.54-.08-.16-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.54.08-.82.38-.28.3-1.07 1.04-1.07 2.53 0 1.49 1.1 2.93 1.25 3.13.16.2 2.16 3.3 5.24 4.62.73.31 1.3.5 1.74.64.73.23 1.4.2 1.92.12.59-.09 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.08-.13-.27-.2-.57-.36z"/>
+            <path fill="currentColor" d="M16 3C9.38 3 4 8.2 4 14.6c0 2.44.78 4.7 2.12 6.56L5 29l7.1-2.3c1.13.32 2.33.5 3.58.5 6.62 0 12-5.2 12-11.6S22.62 3 16 3zm0 21.2c-1.16 0-2.28-.2-3.32-.56l-.36-.12-4.2 1.36 1.38-4.02-.23-.38A8.67 8.67 0 0 1 7.4 14.6c0-4.78 4.06-8.67 9.06-8.67s9.06 3.89 9.06 8.67-4.06 8.66-9.06 8.66z"/>
+          </svg>
         </a>
+
+        <button class="fab" id="menuBtn" type="button" aria-label="Menu">
+          ☰
+        </button>
+
+        <button class="fab" id="volBtn" type="button" aria-label="Volume">
+          🔊
+        </button>
+
+        <button class="fab" id="playBtn" type="button" aria-label="Play">
+          ▶
+        </button>
       </div>
-    </section>
-
-    <section id="rsvp" class="card rsvp">
-      <h2>RSVP</h2>
-      <p class="subtitle">Isi nama dan jumlah tamu, nanti muncul pesan WhatsApp otomatis.</p>
-
-      <form id="rsvpForm">
-        <label>
-          Nama
-          <input id="nama" type="text" placeholder="Contoh: Dinda" required />
-        </label>
-
-        <label>
-          Jumlah Tamu
-          <input id="jumlah" type="number" min="1" max="10" value="1" required />
-        </label>
-
-        <button class="btn primary" type="submit">Kirim via WhatsApp</button>
-        <p class="hint" id="hint"></p>
-      </form>
     </section>
   </main>
-
-  <footer class="footer">
-    <p>© 2026 • Dibuat dengan ❤</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
