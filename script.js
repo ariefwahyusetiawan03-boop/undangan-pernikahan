@@ -1,22 +1,20 @@
-const form = document.getElementById("rsvpForm");
-const hint = document.getElementById("hint");
+// Ambil nama tamu dari URL, contoh:
+// .../index.html?tamu=Rina
+const params = new URLSearchParams(window.location.search);
+const tamu = params.get("tamu");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+const guestEl = document.getElementById("guestName");
+if (tamu && tamu.trim()) guestEl.textContent = tamu.trim();
 
-  const nama = document.getElementById("nama").value.trim();
-  const jumlah = document.getElementById("jumlah").value;
-
-  if (!nama) return;
-
-  // Ganti nomor WA tujuan di bawah ini (format internasional tanpa +)
-  const nomorWA = "6281234567890";
-
-  const pesan = encodeURIComponent(
-    `Assalamualaikum, saya ${nama} ingin konfirmasi hadir. Jumlah tamu: ${jumlah}.`
-  );
-
-  const url = `https://wa.me/${nomorWA}?text=${pesan}`;
-  hint.textContent = "Membuka WhatsApp…";
-  window.open(url, "_blank");
+// Tombol Open Invitation (nanti kita arahkan ke halaman berikutnya)
+document.getElementById("openBtn").addEventListener("click", () => {
+  // sementara: kasih efek kecil aja
+  alert("Next: kita buat halaman isi undangan 😊");
 });
+
+// Tombol WA (ganti nomor kamu)
+const nomorWA = "6281234567890"; // ganti
+const waBtn = document.getElementById("waBtn");
+const namaTamu = (guestEl.textContent || "Tamu").trim();
+const pesan = encodeURIComponent(`Halo, saya ${namaTamu} ingin tanya undangan Arief & Eka.`);
+waBtn.href = `https://wa.me/${nomorWA}?text=${pesan}`;
